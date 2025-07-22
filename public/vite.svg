@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Vite Logo</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M0 0h100v100H0z"/>
+    <path fill="#646cff" d="M50 0l25 50-25 50-25-50z"/>
+    <path fill="#ff3e00" d="M50 0l25 50-25 50-25-50z"/>
+    <path fill="#fff" d="M50 20l-10 20h20z"/>
+  </g>
+</svg>
