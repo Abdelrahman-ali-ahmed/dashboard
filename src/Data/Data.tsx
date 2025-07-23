@@ -49,11 +49,21 @@ const Data = () => {
       <span className="text-gray-400 text-sm col-span-4">Brief Overview</span>
 
       {/* Analytics Charts */}
-      {[<Analytics chart_i />, <Analytics chart_ii />, <Analytics chart_iii />, <Analytics title="New Followers" value="+ 0" illustration={img} />].map((chart, i) => (
-        <div key={i} className="bg-gradient-to-br from-[#00464e] to-[#810551] rounded-xl p-4 w-full h-[300px] flex items-center justify-center">
-          {chart}
-        </div>
-      ))}
+     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 col-span-4">
+  <div className="bg-gradient-to-br from-[#00464e] to-[#810551] rounded-xl p-4 flex items-center justify-center overflow-x-auto min-h-[300px]">
+    <Analytics chart_i />
+  </div>
+  <div className="bg-gradient-to-br from-[#00464e] to-[#810551] rounded-xl p-4 flex items-center justify-center overflow-x-auto min-h-[300px]">
+    <Analytics chart_ii />
+  </div>
+  <div className="bg-gradient-to-br from-[#00464e] to-[#810551] rounded-xl p-4 flex items-center justify-center overflow-x-auto min-h-[300px]">
+    <Analytics chart_iii />
+  </div>
+  <div className="bg-gradient-to-br from-[#00464e] to-[#810551] rounded-xl p-4 flex items-center justify-center overflow-x-auto min-h-[300px]">
+    <Analytics title="New Followers" value={`+ ${Math.floor(Math.random() * 100)}`} illustration={img} />
+  </div>
+</div>
+
 
       {/* Section Title */}
       <span className="text-gray-400 text-sm col-span-4">Analytic Tools</span>
