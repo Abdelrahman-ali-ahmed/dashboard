@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Header from '../components/Header/Header';
 import Analytics from '../components/Analytics/Analytics';
-import Data from '../Data/DAta';
+import Data from '../Data/Data';
 
 export default function Content() {
   const darkTheme = useSelector((state) => state.theme.darkTheme);
