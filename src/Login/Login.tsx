@@ -129,11 +129,11 @@ const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
             type="submit"
             className="bg-white text-black py-3 mt-4 rounded font-medium hover:bg-gray-100 active:scale-95 transition text-base"
           >
-            {NewUser ? "Sign Up" : "Log In"}
+            {!NewUser ? "Sign Up" : "Log In"}
           </button>
 
           <span className="text-gray-400 text-sm text-center mt-4 leading-relaxed">
-            {NewUser ? (
+            {!NewUser ? (
               <>
                 Already have an account?{" "}
                 <button
