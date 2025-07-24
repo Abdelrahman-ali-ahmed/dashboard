@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login as loginAction } from "../redux/loginSlice.js";
 
 const Login = () => {
-  const [NewUser, setNewUser] = useState(true);
+  const [NewUser, setNewUser] = useState(false);
   const [username, setusername] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
@@ -21,7 +21,7 @@ const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
   e.preventDefault();
   seterror(false);
   try {
-    if (!NewUser) {
+    if (NewUser) {
       await register(email, password);
       setNewUser(false); 
     } else {
@@ -62,7 +62,7 @@ const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
         </h2>
 
         <form className="flex flex-col gap-6" onSubmit={submit}>
-          {!NewUser && (
+          {NewUser && (
             <div className="relative">
               <input
                 onChange={(e) => setusername(e.target.value)}
@@ -129,11 +129,11 @@ const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
             type="submit"
             className="bg-white text-black py-3 mt-4 rounded font-medium hover:bg-gray-100 active:scale-95 transition text-base"
           >
-            {!NewUser ? "Sign Up" : "Log In"}
+            {NewUser ? "Sign Up" : "Log In"}
           </button>
 
           <span className="text-gray-400 text-sm text-center mt-4 leading-relaxed">
-            {!NewUser ? (
+            {NewUser ? (
               <>
                 Already have an account?{" "}
                 <button
