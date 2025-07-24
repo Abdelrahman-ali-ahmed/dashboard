@@ -59,3 +59,7 @@ You can add new components in the `src/components` directory. Make sure to impor
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
+## technologies used
+i used tailwind css and react + vite and firebase for authentication and redux toolkit for state management like theme and login and use  https://omatsuri.app/ to draw line 
+and not in dynamic data what i made to to make data be change every time when you enter and using recharts for charts and try to make it frienly withe mobile as i can 
+
