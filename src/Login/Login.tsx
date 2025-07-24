@@ -21,7 +21,7 @@ const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
   e.preventDefault();
   seterror(false);
   try {
-    if (NewUser) {
+    if (!NewUser) {
       await register(email, password);
       setNewUser(false); 
     } else {
@@ -62,7 +62,7 @@ const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
         </h2>
 
         <form className="flex flex-col gap-6" onSubmit={submit}>
-          {NewUser && (
+          {!NewUser && (
             <div className="relative">
               <input
                 onChange={(e) => setusername(e.target.value)}
